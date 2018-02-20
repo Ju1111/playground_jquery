@@ -81,37 +81,37 @@
   }
 
   function changeColor() {
-    $('#textcolor').change(function(e) {
+    $('#textcolor').bind('input',function(e) {
       $('#canvas').css('color', e.target.value);
     })
   }
 
   function changeBackgroundColor() {
-    $('#bgcolor').change(function (e) {
+    $('#bgcolor').bind('input',function (e) {
       $('#canvas').css('background-color', e.target.value);
     })
   }
 
   function changeTextSize() {
-    $('#textsize').change(function(e) {
+    $('#textsize').bind('input',function(e) {
       $('#canvas').css('font-size', e.target.value + "px");
     })
   }
 
   function changeLineHeight() {
-    $('#lineheight').change(function(e) {
+    $('#lineheight').bind('input',function(e) {
       $('#canvas').css('line-height', e.target.value + "px");
     })
   }
 
   function changePadding() {
-    $('#textpadding').change(function(e) {
+    $('#textpadding').bind('input',function(e) {
       $('#canvas').css('padding', e.target.value + "px");
     })
   }
 
   function changeBordercolor() {
-    $('#bordercolor').change(function(e) {
+    $('#bordercolor').bind('input',function(e) {
       $('#canvas').css('border-color', e.target.value);
     })
   }
