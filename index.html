@@ -80,13 +80,13 @@
 
   function changeFont() {
     $('input[type=radio][name=fontname]').change(function(e) {
-      canvas.css('font-family', e.target.value);
+      changeCanvasFont(e.target.value);
     })
   }
 
   function changeColor() {
     $('#textcolor').bind('input',function(e) {
-      changeCanvasFont(e.target.value);
+      canvas.css('color', e.target.value);
     })
   }
 
