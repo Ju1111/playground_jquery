@@ -91,10 +91,17 @@
     })
   }
 
+  function changeTextSize() {
+    $('#textsize').change(function(e) {
+      $('#canvas').css('font-size', e.target.value + "px");
+    })
+  }
+
   $(document).ready(function() {
     changeFont();
     changeColor();
     changeBackgroundColor();
+    changeTextSize();
   });
 </script>
 </body>
