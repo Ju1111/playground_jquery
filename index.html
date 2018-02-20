@@ -17,7 +17,7 @@
       font: bold 20px helvetica, arial, sans-serif;
     }
     #canvas {
-      border: 2.5px dashed #008;
+      border: 2.5px dashed #000;
       padding: 10px;
       font: 16px/18px "times new roman", times, serif;
       border-radius: 7px;
@@ -76,47 +76,48 @@
 <script>
   function changeFont() {
     $('input[type=radio][name=fontname]').change(function(e) {
-      $('#canvas').css('font-family', e.target.value);
+      $(canvas).css('font-family', e.target.value);
     })
   }
 
   function changeColor() {
     $('#textcolor').bind('input',function(e) {
-      $('#canvas').css('color', e.target.value);
+      $(canvas).css('color', e.target.value);
     })
   }
 
   function changeBackgroundColor() {
     $('#bgcolor').bind('input',function (e) {
-      $('#canvas').css('background-color', e.target.value);
+      $(canvas).css('background-color', e.target.value);
     })
   }
 
   function changeTextSize() {
     $('#textsize').bind('input',function(e) {
-      $('#canvas').css('font-size', e.target.value + "px");
+      $(canvas).css('font-size', e.target.value + "px");
     })
   }
 
   function changeLineHeight() {
     $('#lineheight').bind('input',function(e) {
-      $('#canvas').css('line-height', e.target.value + "px");
+      $(canvas).css('line-height', e.target.value + "px");
     })
   }
 
   function changePadding() {
     $('#textpadding').bind('input',function(e) {
-      $('#canvas').css('padding', e.target.value + "px");
+      $(canvas).css('padding', e.target.value + "px");
     })
   }
 
   function changeBordercolor() {
     $('#bordercolor').bind('input',function(e) {
-      $('#canvas').css('border-color', e.target.value);
+      $(canvas).css('border-color', e.target.value);
     })
   }
 
   $(document).ready(function() {
+    var canvas = $('#canvas');
     changeFont();
     changeColor();
     changeBackgroundColor();
