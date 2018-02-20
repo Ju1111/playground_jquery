@@ -76,11 +76,18 @@
   function changeFont() {
     $('input[type=radio][name=fontname]').change(function(e) {
       $('#canvas').css('font-family', e.target.value);
-    })
+    });
+  }
+
+  function changeColor() {
+    $('#textcolor').change(function(e) {
+      $('#canvas').css('color', e.target.value);
+    });
   }
 
   $(document).ready(function() {
     changeFont();
+    changeColor();
   });
 </script>
 </body>
