@@ -103,12 +103,19 @@
     })
   }
 
+  function changePadding() {
+    $('#textpadding').change(function(e) {
+      $('#canvas').css('padding', e.target.value + "px");
+    })
+  }
+
   $(document).ready(function() {
     changeFont();
     changeColor();
     changeBackgroundColor();
     changeTextSize();
     changeLineHeight();
+    changePadding();
   });
 </script>
 </body>
