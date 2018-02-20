@@ -17,7 +17,7 @@
       font: bold 20px helvetica, arial, sans-serif;
     }
     #canvas {
-      border: 2px dashed #008;
+      border: 2.5px dashed #008;
       padding: 10px;
       font: 16px/18px "times new roman", times, serif;
       border-radius: 7px;
@@ -56,6 +56,7 @@
         <h2>Color</h2>
         <p>Text: <input id="textcolor" type="text" name="textcolor" value="#000" size="7"></p>
         <p>Background: <input id="bgcolor" type="text" name="bgcolor" value="#fff" size="7"></p>
+        <p>Border <input id="bordercolor" type="text" name="bordercolor" value="#008" size="7"></p>
       </div>
       <div class="control">
         <h2>Spacing</h2>
@@ -109,6 +110,12 @@
     })
   }
 
+  function changeBordercolor() {
+    $('#bordercolor').change(function(e) {
+      $('#canvas').css('border-color', e.target.value);
+    })
+  }
+
   $(document).ready(function() {
     changeFont();
     changeColor();
@@ -116,6 +123,7 @@
     changeTextSize();
     changeLineHeight();
     changePadding();
+    changeBordercolor();
   });
 </script>
 </body>
