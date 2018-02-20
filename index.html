@@ -10,15 +10,17 @@
     }
     h1 {
       font: bold 25px helvetica, arial, sans-serif;
+      color: #008;
       text-align: center;
     }
     h2 {
       font: bold 20px helvetica, arial, sans-serif;
     }
     #canvas {
-      border: 1px dashed #000;
+      border: 2px dashed #008;
       padding: 10px;
       font: 16px/18px "times new roman", times, serif;
+      border-radius: 7px;
     }
     #controls {
       display: -webkit-flex;
@@ -71,7 +73,15 @@
 
   </div>
 <script>
-// JavaScript goes here.
+  function changeFont() {
+    $('input[type=radio][name=fontname]').change(function(e) {
+      $('#canvas').css('font-family', e.target.value);
+    })
+  }
+
+  $(document).ready(function() {
+    changeFont();
+  });
 </script>
 </body>
 </html>
